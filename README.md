@@ -2,7 +2,7 @@
 
 ### Farmers' Monitor
 
-[Monitor Program]()
+[Monitor Program](https://phanmad000.github.io/Group4/animal.html)
 
 ### Bar Chart Comparison
-[Comparison Charts]()
+[Comparison Charts](https://phanmad000.github.io/Group4/charts.html)
