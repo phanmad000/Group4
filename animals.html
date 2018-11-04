@@ -21,54 +21,58 @@
  <g>
   <title>Layer 1</title>
   <image stroke="null" xlink:href="farm.jpg" id="farm" height="763.826017" width="1292.003519" y="-49.66768" x="-46.965705"/>
-  <image stroke="null" xlink:href="chicken.png" id="chicken" height="122.960628" width="122.331353" y="551.705639" x="473.831841"/>
-  <image stroke="null" xlink:href="pig.png" id="pig" height="157.572179" width="328.748784" y="517.653094" x="571.624361"/>
-  <image stroke="null" xlink:href="cow.png" id="cow" height="274.193991" width="365.998775" y="427.139778" x="843.666539"/>
-  <image stroke="null" xlink:href="crop.png" id="crop" height="244.663862" width="279.330475" y="482.001901" x="188.66953"/>
-  <image stroke="null" xlink:href="dirt.png" id="dirt" height="64.239086" width="175.997496" y="609.761957" x="20.004018"/>
-   
-  <rect id="outerbox" height="371.999672" width="922.665853" y="41.33328" x="132.667099" stroke-width="1.5" stroke="#000" fill="#a9cece"/>
-  <ellipse stroke="#000" id="replace" ry="45.333291" rx="144.666538" id="svg_11" cy="99.999898" cx="589.333352" stroke-opacity="null" stroke-width="5" fill="#a9cece"/>
-  <rect id="graph" height="234.66646" width="294.666407" y="159.999842" x="179.333725" fill-opacity="null" stroke-opacity="null" stroke-width="5" stroke="#000" fill="#a9cece"/>
-  <text stroke="#000" transform="rotate(-0.8749181628227234 731.8098144531242,246.46846008300452) matrix(428.5781020819263,0,0,94.00295297499436,-224817.46120174415,-19522.793196465034) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="1" id="svg_13" y="210.666464" x="526.000086" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000"/>
-  <text font-weight="bold" stroke="#000" transform="matrix(0.9211968779563903,0,0,1.4447336196899414,39.6638276623562,-76.34220209717752) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="svg_14" y="200.20371" x="507.333435" stroke-opacity="null" stroke-width="0" fill="#000000">Background Information:</text>
-  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="firstLine" y="266.665911" x="504.666771" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Bla Baasfj;skfkasdfjsdalkfjsdl;akfjsdlkafjsdklfjsd;laa;</text>
+<a href="#"><g id="fm-animal">
+  <image stroke="null" xlink:href="chicken.png" id="fm-chicken2" height="122.960628" width="122.331353" y="100" x="590" opacity="0"/>
+  <image stroke="null" xlink:href="chicken.png" id="fm-chicken" onclick="callChicken()" height="122.960628" width="122.331353" y="551.705639" x="473.831841"
+    onmouseover="document.getElementById('fm-chicken').setAttribute('height', '140'); document.getElementById('fm-chicken').setAttribute('width', '140');
+    document.getElementById('fm-chicken').setAttribute('x', '460');"
+    onmouseout="document.getElementById('fm-chicken').setAttribute('height', '122.960628'); document.getElementById('fm-chicken').setAttribute('width', '122.331353');
+    document.getElementById('fm-chicken').setAttribute('x', '473.831841');"/>
+  <image stroke="null" xlink:href="pig.png" id="fm-pig" height="157.572179" width="328.748784" y="517.653094" x="571.624361"/>
+  <image stroke="null" xlink:href="cow.png" id="fm-cow" height="274.193991" width="365.998775" y="427.139778" x="843.666539"/>
+  <image stroke="null" xlink:href="crop.png" id="fm-crop" height="244.663862" width="279.330475" y="482.001901" x="188.66953"/>
+  <image stroke="null" xlink:href="dirt.png" id="fm-dirt" height="64.239086" width="175.997496" y="609.761957" x="20.004018"/>
+
+  <g id="box" fill-opacity="0" stroke-opacity="0">
+    <rect height="371.999672" width="922.665853" y="41" x="133" stroke-width="1.5" stroke="#000" fill="#a9cece"/>
+    <ellipse stroke="#000" id="replace" ry="45.333291" rx="144.666538"  cy="99.999898" cx="589.333352" stroke-opacity="null" stroke-width="5" fill="#a9cece"/>
+    <rect id="graph" height="234.66646" width="294.666407" y="159.999842" x="179.333725" fill-opacity="null" stroke-opacity="null" stroke-width="5" stroke="#000" fill="#a9cece"/>
+    <text stroke="#000" transform="rotate(-0.8749181628227234 731.8098144531242,246.46846008300452) matrix(428.5781020819263,0,0,94.00295297499436,-224817.46120174415,-19522.793196465034) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="1" id="svg_13" y="210.666464" x="526.000086" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000"/>
+
+    <foreignobject id="backBox" class="node" height="210" width="530" y="230" x="507">
+    <div id="background">
+    </div>
+    </foreignobject>
+
+    <text font-weight="bold" stroke="#000" transform="matrix(0.9211968779563903,0,0,1.4447336196899414,39.6638276623562,-76.34220209717752) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="smallTitle" y="200.20371" x="507.333435" stroke-opacity="null" stroke-width="0" fill="#000000">Background Information:</text>
+
+  <!--<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="firstLine" y="266.665911" x="504.666771" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Bla Baasfj;skfkasdfjsdalkfjsdl;akfjsdlkafjsdklfjsd;laa;</text>
   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="secondLine" y="299.999215" x="503.333439" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">akjfsfds;akfsjd;lfjskafjkdslf;sfksjda;lfkdsajf;ldsjf;ldsjfsa</text>
   <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="thirdLine" y="335.999127" x="500.666775" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">ajkfsdjf;skdjf;lsdajfkls;djafl;sjfkl;sajflksdjfsklajfjfj fjsafsf</text>
-  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="x" y="74.666584" x="1021.999647" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bf0000">X</text>
-  <rect id="mainMenu" height="64" width="64" y="40" x=50"
-  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="fourthLine" y="370.658566" x="502.00214" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">kjfs;akfsdajfskld;jfklsdajfkl;dsjfklsjaklfsdjafklsf;lsdfjs;lak</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="fourthLine" y="370.658566" x="502.00214" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">kjfs;akfsdajfskld;jfklsdajfkl;dsjfklsjaklfsdjafklsf;lsdfjs;lak</text>-->
+
+    <text xml:space="preserve" onclick="closeBox()" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="x" y="74.666584" x="1021.999647" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bf0000">X</text>
+
+  <image stroke="null" xlink:href="lightBulb.jpg" id="mainMenu" height="64" width="64" y="40" x="25"/>
+
  </g>
 </svg>
-
-<script>
+  <script>
   function callChicken(){
-  
+    document.getElementById("fm-chicken2").setAttribute('opacity', '1');
+    document.getElementById("background").innerHTML='flkdajfkdjs;flksajf;lkdsjfa;lskjflsggggggggggggggggggggggggggggggggggg<br>';
+    document.getElementById("box").setAttribute('fill-opacity', '1');
+
   }
-  
-  function callPig(){
-  
-  }
-  
-  function callCow(){
-  
-  }
-  
-  function callCrop(){
-  
-  }
-  
-  function callDirt(){
-  
-  }
-  
+//70 characters per line
   function closeBox(){
-    document.getElementById('outerbox').setAttribute('fill-opacity', '0');
-    document.getElementById('info-box').setAttribute('stroke-opacity', '0');
+    document.getElementById('box').setAttribute('fill-opacity', '0');
+    document.getElementById('box').setAttribute('stroke-opacity', '0');
+    document.getElementById('backBox').setAttribute('opacity', '0');
   }
-  
+
   function mainMenu(){
-  
+
   }
 </script>
 </body>
