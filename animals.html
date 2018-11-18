@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
 <title>Gas Emissions from Animals</title>
 <!--<script type="text/javascript" src="index.js"></script>-->
 </head>
@@ -31,20 +29,19 @@
       document.getElementById('fm-chicken').setAttribute('x', '150');"
       onmouseout="document.getElementById('fm-chicken').setAttribute('height', '122.960628'); document.getElementById('fm-chicken').setAttribute('width', '122.331353');
       document.getElementById('fm-chicken').setAttribute('x', '150');"/>
-    <image stroke="null" xlink:href="pig.png" id="fm-pig" height="157.572179" width="328.748784" y="517.653094" x="400"
+    <image stroke="null" xlink:href="pig.png" onclick="callPig()" id="fm-pig" height="157.572179" width="328.748784" y="517.653094" x="400"
       onmouseover="document.getElementById('fm-pig').setAttribute('height', '170');"
       onmouseout="document.getElementById('fm-pig').setAttribute('height', '157.572179');"/>
-    <image stroke="null" xlink:href="cow.png" id="fm-cow" height="274.193991" width="365.998775" y="427.139778" x="800"
+    <image stroke="null" xlink:href="cow.png" id="fm-cow" onclick="callCow()" height="274.193991" width="365.998775" y="427.139778" x="800"
       onmouseover="document.getElementById('fm-cow').setAttribute('width', '400');
       document.getElementById('fm-cow').setAttribute('y', '420');"
       onmouseout="document.getElementById('fm-cow').setAttribute('width', '365.998775');
       document.getElementById('fm-cow').setAttribute('y', '427.139778');"/>
 
 
-  <g id="box">
-      <rect height="371.999672" width="922.665853" y="41" x="133" stroke-width="1.5" stroke="#000" fill="#a9cece"/>
+  <g>
+      <rect id="box" height="371.999672" width="922.665853" y="41" x="-1330" stroke-width="1.5" stroke="#000" fill="#a9cece"/>
       <!--<ellipse stroke="#000" id="replace" ry="45.333291" rx="144.666538"  cy="99.999898" cx="589.333352" stroke-opacity="null" stroke-width="5" fill="#a9cece"/>-->
-      <text stroke="#000" transform="rotate(-0.8749181628227234 731.8098144531242,246.46846008300452) matrix(428.5781020819263,0,0,94.00295297499436,-224817.46120174415,-19522.793196465034) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="1" id="svg_13" y="210.666464" x="526.000086" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000"/>
 
       <foreignobject id="backBox" class="node" height="210" width="530" y="230" x="507">
       <div id="background">
@@ -52,31 +49,67 @@
       </foreignobject>
 
 <g id="chickenCalc">
-      <foreignobject id="boxchickenInput" class="node" height="100" width="150" y="195" x="235" stroke-width="1.5" stroke="#000" fill="#fff">
-        <input type="text" id="chickenInputCalc" value="  number of chickens" maxlength="25"/>
+  <foreignobject id="boxchickenInput" height="20" width="150" y="195" x="-235" stroke-width="1.5" stroke="#000" fill="#fff">
+    <input type="text" id="chickenInputCalc" value="  number of chickens" maxlength="25"/>
+  </foreignobject>
+      <rect id="c-outerEqual" onclick="chickenOutput()" height="50" width="85" y="240" x="-280" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
+      <rect id="c-upperEqual" onclick="chickenOutput()" height="10" width="35" y="252" x="-305" stroke-width="1.5" stroke="#000" fill="#000"/>
+      <rect id="c-lowerEqual" onclick="chickenOutput()" height="10" width="35" y="270" x="-305" stroke-width="1.5" stroke="#000" fill="#000"/>
+
+      <rect id="boxOutputOuter" height="50" width="250" y="300" x="-2000" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
+      <foreignobject id="boxOutput" height="50" width="250" y="303" x="270"  stroke-width="1.5" font-size="22" stroke="#000" fill="#D9EBF1">
+      <div id="outputCalc">
+      </div>
       </foreignobject>
-      <rect id="c-outerEqual" onclick="chickenOutput()" height="50" width="85" y="240" x="280" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
-      <rect id="c-upperEqual" onclick="chickenOutput()" height="10" width="35" y="252" x="305" stroke-width="1.5" stroke="#000" fill="#000"/>
-      <rect id="c-lowerEqual" onclick="chickenOutput()" height="10" width="35" y="270" x="305" stroke-width="1.5" stroke="#000" fill="#000"/>
+
+      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="sss" y="-375" x="180" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your chickens</text>
 </g>
 
-      <foreignobject id="boxOutputCalc" height="50" width="250" y="300" x="200" stroke-width="1.5" stroke="#000" fill="#D9EBF1">
-      <div id="outputCalc"></div>
+<g id="pigCalc">
+  <foreignobject id="boxpigInput" height="20" width="150" y="195" x="-235" stroke-width="1.5" stroke="#000" fill="#fff">
+    <input type="text" id="pigInputCalc" value="  number of pigs" maxlength="25"/>
+  </foreignobject>
+      <rect id="p-outerEqual" onclick="pigOutput()" height="50" width="85" y="240" x="-280" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
+      <rect id="p-upperEqual" onclick="pigOutput()" height="10" width="35" y="252" x="-305" stroke-width="1.5" stroke="#000" fill="#000"/>
+      <rect id="p-lowerEqual" onclick="pigOutput()" height="10" width="35" y="270" x="-305" stroke-width="1.5" stroke="#000" fill="#000"/>
 
-    </foreignobject>
-      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="sss" y="375" x="180" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG emitted from all of your chickens</text>
+      <rect id="p-boxOutputOuter" height="50" width="250" y="300" x="-2000" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
+      <foreignobject id="p-boxOutput" height="50" width="250" y="303" x="270"  stroke-width="1.5" font-size="22" stroke="#000" fill="#D9EBF1">
+      <div id="outputCalc">
+      </div>
+      </foreignobject>
 
-      <text font-weight="bold" stroke="#000" transform="matrix(0.9211968779563903,0,0,1.4447336196899414,39.6638276623562,-76.34220209717752) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="title" y="200.20371" x="507.333435" stroke-opacity="null" stroke-width="0" fill="#000000">Background Information:</text>
+      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="ppp" y="-375" x="180" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your pigs</text>
+</g>
+
+<g id="cowCalc">
+  <foreignobject id="boxCowInput" height="20" width="150" y="195" x="-235" stroke-width="1.5" stroke="#000" fill="#fff">
+    <input type="text" id="cowInputCalc" value="  number of pigs" maxlength="25"/>
+  </foreignobject>
+      <rect id="w-outerEqual" onclick="cowOutput()" height="50" width="85" y="240" x="-280" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
+      <rect id="w-upperEqual" onclick="cowOutput()" height="10" width="35" y="252" x="-305" stroke-width="1.5" stroke="#000" fill="#000"/>
+      <rect id="w-lowerEqual" onclick="cowOutput()" height="10" width="35" y="270" x="-305" stroke-width="1.5" stroke="#000" fill="#000"/>
+
+      <rect id="w-boxOutputOuter" height="50" width="250" y="300" x="-2000" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
+      <foreignobject id="w-boxOutput" height="50" width="250" y="303" x="270"  stroke-width="1.5" font-size="22" stroke="#000" fill="#D9EBF1">
+      <div id="w-outputCalc">
+      </div>
+      </foreignobject>
+
+      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="www" y="-375" x="180" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your cows</text>
+</g>
+
+      <text font-weight="bold" stroke="#000" transform="matrix(0.9211968779563903,0,0,1.4447336196899414,39.6638276623562,-76.34220209717752) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="title" y="200.20371" x="-507.333435" stroke-opacity="null" stroke-width="0" fill="#000000">Background Information:</text>
 
       <image stroke="null" xlink:href="chicken.png" id="fm-chicken2" height="122.960628" width="122.331353" y="60" x="-590"/>
       <image stroke="null" xlink:href="pig.png" id="fm-pig2" height="122.960628" width="122.331353" y="60" x="-590"/>
       <image stroke="null" xlink:href="cow.png" id="fm-cow2" height="122.960628" width="122.331353" y="60" x="-590"/>
 
-      <image stroke="null" xlink:href="chickenGraph.png" id="chickenGraph" height="210" width="500" y="230" x="-507"/>
-      <image stroke="null" xlink:href="pigsGraph.png" id="pigGraph" height="210" width="500" y="230" x="-507"/>
-      <image stroke="null" xlink:href="cowGraph.png" id="cowGraph" height="210" width="500" y="230" x="-507"/>
+      <image stroke="null" xlink:href="chickenChart.jpg" id="chickenGraph" height="475" width="500" y="60" x="-507"/>
+      <image stroke="null" xlink:href="pigsChart.png" id="pigGraph" height="475" width="500" y="60" x="-507"/>
+      <image stroke="null" xlink:href="cowChart.png" id="cowGraph" height="475" width="500" y="60" x="-507"/>
 
-      <text onclick="closeBox()" font-family="Helvetica, Arial, sans-serif" font-size="22" id="x" y="74.666584" x="1021.999647" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bf0000">X</text>
+      <text onclick="closeBox()" font-family="Helvetica, Arial, sans-serif" font-size="22" id="x" y="74.666584" x="-1021.999647" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bf0000">X</text>
 
 
     <!--<text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="firstLine" y="266.665911" x="504.666771" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Bla Baasfj;skfkasdfjsdalkfjsdl;akfjsdlkafjsdklfjsd;laa;</text>
@@ -91,28 +124,201 @@
 <script>
 
 function callChicken(){
+  document.getElementById("fm-pig2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxPigInput").setAttribute('x', '-235');
+  document.getElementById("p-outerEqual").setAttribute('x', '-280');
+  document.getElementById("p-upperEqual").setAttribute('x', '-305');
+  document.getElementById("p-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("ppp").setAttribute('y', '-375');
+  document.getElementById("pigGraph").setAttribute('x', '-507');
 
+  document.getElementById("fm-cow2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxCowInput").setAttribute('x', '-235');
+  document.getElementById("w-outerEqual").setAttribute('x', '-280');
+  document.getElementById("w-upperEqual").setAttribute('x', '-305');
+  document.getElementById("w-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("www").setAttribute('y', '-375');
+  document.getElementById("cowGraph").setAttribute('x', '-507');
+
+  document.getElementById("box").setAttribute('x', '133');
+  document.getElementById("title").setAttribute('x', '507.333435');
+  document.getElementById("x").setAttribute('x', '1021.999647');
   document.getElementById("fm-chicken2").setAttribute('x', '540');
   document.getElementById("background").innerHTML='flkdajfkdjs;flksajf;lkdsjfa;lskjflsggggggggggggggggggggggggggggggggggg<br>';
-
-  }
+  document.getElementById("boxchickenInput").setAttribute('x', '235');
+  document.getElementById("c-outerEqual").setAttribute('x', '280');
+  document.getElementById("c-upperEqual").setAttribute('x', '305');
+  document.getElementById("c-lowerEqual").setAttribute('x', '305');
+  document.getElementById("outputCalc").setAttribute('x', '200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '200');
+  document.getElementById("sss").setAttribute('y', '375');
+}
 
 function chickenOutput(){
     var chickenInputCalc = document.getElementById("chickenInputCalc").value;
     if (chickenInputCalc == ' ') {
-      alert('Please input a number.')
+      alert('Please input a number.');
     }
     else if (isNaN(chickenInputCalc)) {
-      alert('Please input a number.')
+      alert('Please input a number.');
     }
       else {
-        var output = chickeninputCalc * 306.122;
-        document.getElementById('outputCalc').innerHTML = var output;
+        var output = chickenInputCalc * 306.122;
+        document.getElementById('outputCalc').innerHTML = output;
+        document.getElementById("chickenGraph").setAttribute('x', '507');
     }
 }
 //70 characters per line
+
+function callPig(){
+  document.getElementById("fm-chicken2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxChickenInput").setAttribute('x', '-235');
+  document.getElementById("c-outerEqual").setAttribute('x', '-280');
+  document.getElementById("c-upperEqual").setAttribute('x', '-305');
+  document.getElementById("c-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("sss").setAttribute('y', '-375');
+  document.getElementById("chickenGraph").setAttribute('x', '-507');
+
+  document.getElementById("fm-cow2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxCowInput").setAttribute('x', '-235');
+  document.getElementById("w-outerEqual").setAttribute('x', '-280');
+  document.getElementById("w-upperEqual").setAttribute('x', '-305');
+  document.getElementById("w-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("www").setAttribute('y', '-375');
+  document.getElementById("cowGraph").setAttribute('x', '-507');
+
+
+  document.getElementById("box").setAttribute('x', '133');
+  document.getElementById("title").setAttribute('x', '507.333435');
+  document.getElementById("x").setAttribute('x', '1021.999647');
+  document.getElementById("fm-pig2").setAttribute('x', '540');
+  document.getElementById("background").innerHTML='flkdajfkdjs;flksajf;lkdsjfa;lskjflsggggggggggggggggggggggggggggggggggg<br>';
+  document.getElementById("boxchickenInput").setAttribute('x', '235');
+  document.getElementById("p-pigEqual").setAttribute('x', '280');
+  document.getElementById("p-upperEqual").setAttribute('x', '305');
+  document.getElementById("p-lowerEqual").setAttribute('x', '305');
+  document.getElementById("p-outputCalc").setAttribute('x', '200');
+  document.getElementById("p-boxOutputOuter").setAttribute('x', '200');
+  document.getElementById("ppp").setAttribute('y', '375');
+}
+
+function pigOutput(){
+    var pigInputCalc = document.getElementById("pigInputCalc").value;
+    if (pigInputCalc == ' ') {
+      alert('Please input a number.');
+    }
+    else if (isNaN(pigInputCalc)) {
+      alert('Please input a number.');
+    }
+      else {
+        var output = pigInputCalc * 714.286;
+        document.getElementById('p-outputCalc').innerHTML = output;
+        document.getElementById("pigGraph").setAttribute('x', '507');
+    }
+}
+
+function callCow(){
+  document.getElementById("fm-chicken2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxChickenInput").setAttribute('x', '-235');
+  document.getElementById("c-outerEqual").setAttribute('x', '-280');
+  document.getElementById("c-upperEqual").setAttribute('x', '-305');
+  document.getElementById("c-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("sss").setAttribute('y', '-375');
+  document.getElementById("chickenGraph").setAttribute('x', '-507');
+
+  document.getElementById("fm-pig2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxPigInput").setAttribute('x', '-235');
+  document.getElementById("p-outerEqual").setAttribute('x', '-280');
+  document.getElementById("p-upperEqual").setAttribute('x', '-305');
+  document.getElementById("p-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("ppp").setAttribute('y', '-375');
+  document.getElementById("pigGraph").setAttribute('x', '-507');
+
+  document.getElementById("box").setAttribute('x', '133');
+  document.getElementById("title").setAttribute('x', '507.333435');
+  document.getElementById("x").setAttribute('x', '1021.999647');
+  document.getElementById("fm-cow2").setAttribute('x', '540');
+  document.getElementById("background").innerHTML='flkdajfkdjs;flksajf;lkdsjfa;lskjflsggggggggggggggggggggggggggggggggggg<br>';
+  document.getElementById("boxchickenInput").setAttribute('x', '235');
+  document.getElementById("w-pigEqual").setAttribute('x', '280');
+  document.getElementById("w-upperEqual").setAttribute('x', '305');
+  document.getElementById("w-lowerEqual").setAttribute('x', '305');
+  document.getElementById("w-outputCalc").setAttribute('x', '200');
+  document.getElementById("w-boxOutputOuter").setAttribute('x', '200');
+  document.getElementById("www").setAttribute('y', '375');
+}
+
+function cowOutput(){
+    var cowInputCalc = document.getElementById("pigInputCalc").value;
+    if (cowInputCalc == ' ') {
+      alert('Please input a number.');
+    }
+    else if (isNaN(cowInputCalc)) {
+      alert('Please input a number.');
+    }
+      else {
+        var output = cowInputCalc * 3006.993;
+        document.getElementById('w-outputCalc').innerHTML = output;
+        document.getElementById("cowGraph").setAttribute('x', '507');
+    }
+}
+
 function closeBox(){
   document.getElementById('title').setAttribute('x', '-500');
+  document.getElementById("box").setAttribute('x', '-1330');
+  document.getElementById("x").setAttribute('x', '-10210');
+
+  document.getElementById("fm-chicken2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxChickenInput").setAttribute('x', '-235');
+  document.getElementById("c-outerEqual").setAttribute('x', '-280');
+  document.getElementById("c-upperEqual").setAttribute('x', '-305');
+  document.getElementById("c-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("sss").setAttribute('y', '-375');
+  document.getElementById("chickenGraph").setAttribute('x', '-507');
+
+  document.getElementById("fm-pig2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxPigInput").setAttribute('x', '-235');
+  document.getElementById("p-outerEqual").setAttribute('x', '-280');
+  document.getElementById("p-upperEqual").setAttribute('x', '-305');
+  document.getElementById("p-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("ppp").setAttribute('y', '-375');
+  document.getElementById("pigGraph").setAttribute('x', '-507');
+
+  document.getElementById("fm-cow2").setAttribute('x', '-540');
+  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("boxCowInput").setAttribute('x', '-235');
+  document.getElementById("w-outerEqual").setAttribute('x', '-280');
+  document.getElementById("w-upperEqual").setAttribute('x', '-305');
+  document.getElementById("w-lowerEqual").setAttribute('x', '-305');
+  document.getElementById("outputCalc").setAttribute('x', '-200');
+  document.getElementById("boxOutputOuter").setAttribute('x', '-200');
+  document.getElementById("www").setAttribute('y', '-375');
+  document.getElementById("cowGraph").setAttribute('x', '-507');
+
 }
 </script>
 
