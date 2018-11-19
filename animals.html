@@ -153,8 +153,8 @@ function callChicken(){
   document.getElementById("c-outerEqual").setAttribute('x', '280');
   document.getElementById("c-upperEqual").setAttribute('x', '305');
   document.getElementById("c-lowerEqual").setAttribute('x', '305');
-  document.getElementById("boxOutput").setAttribute('x', '250');
-  document.getElementById("outputCalc").setAttribute('x', '250');
+  document.getElementById("boxOutput").setAttribute('x', '210');
+  document.getElementById("outputCalc").setAttribute('x', '210');
   document.getElementById("boxOutputOuter").setAttribute('x', '200');
   document.getElementById("sss").setAttribute('y', '375');
 }
@@ -171,7 +171,8 @@ function chickenOutput(){
         var output = chickenInputCalc * 306.122;
         document.getElementById('outputCalc').innerHTML = output;
         document.getElementById('title').setAttribute('x', '-500');
-        document.getElementById("background").setAttribute('x', '-1000')
+        document.getElementById("background").setAttribute('x', '-1000');
+        document.getElementById("backBox").setAttribute('x', '-1000');
         document.getElementById("chickenGraph").setAttribute('x', '510');
     }
 }
@@ -226,7 +227,8 @@ function pigOutput(){
         var output = pigInputCalc * 714.286;
         document.getElementById('p-outputCalc').innerHTML = output;
         document.getElementById('title').setAttribute('x', '-500');
-        document.getElementById("background").setAttribute('x', '-1000')
+        document.getElementById("background").setAttribute('x', '-1000');
+        document.getElementById("backBox").setAttribute('x', '-1000');
         document.getElementById("pigGraph").setAttribute('x', '510');
     }
 }
@@ -277,7 +279,8 @@ function cowOutput(){
         var output = cowInputCalc * 3006.993;
         document.getElementById('w-outputCalc').innerHTML = output;
         document.getElementById('title').setAttribute('x', '-500');
-        document.getElementById("background").setAttribute('x', '-1000')
+        document.getElementById("background").setAttribute('x', '-1000');
+        document.getElementById("backBox").setAttribute('x', '-1000');
         document.getElementById("cowGraph").setAttribute('x', '510');
     }
 }
@@ -285,6 +288,7 @@ function cowOutput(){
 function closeBox(){
   document.getElementById('title').setAttribute('x', '-500');
   document.getElementById("box").setAttribute('x', '-1330');
+  document.getElementById("backBox").setAttribute('x', '-1000');
   document.getElementById("x").setAttribute('x', '-10210');
 
   document.getElementById("fm-chicken2").setAttribute('x', '-540');
