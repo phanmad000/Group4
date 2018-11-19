@@ -62,7 +62,7 @@
       </div>
       </foreignobject>
 
-      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="sss" y="-375" x="180" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your chickens</text>
+      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="sss" y="-375" x="150" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your chickens</text>
 </g>
 
 <g id="pigCalc">
@@ -79,12 +79,12 @@
       </div>
       </foreignobject>
 
-      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="ppp" y="-375" x="180" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your pigs</text>
+      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="ppp" y="-375" x="150" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your pigs</text>
 </g>
 
 <g id="cowCalc">
   <foreignobject id="boxCowInput" height="20" width="150" y="195" x="-235" stroke-width="1.5" stroke="#000" fill="#fff">
-    <input type="text" id="cowInputCalc" value="  number of pigs" maxlength="25"/>
+    <input type="text" id="cowInputCalc" value="  number of cows" maxlength="25"/>
   </foreignobject>
       <rect id="w-outerEqual" onclick="cowOutput()" height="50" width="85" y="240" x="-280" stroke-width="1.5" stroke="#000" fill="#D9EBF1"/>
       <rect id="w-upperEqual" onclick="cowOutput()" height="10" width="35" y="252" x="-305" stroke-width="1.5" stroke="#000" fill="#000"/>
@@ -96,14 +96,14 @@
       </div>
       </foreignobject>
 
-      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="www" y="-375" x="180" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your cows</text>
+      <text font-family="Helvetica, Arial, sans-serif" font-size="15" id="www" y="-375" x="150" stroke-opacity="null" stroke-width="0" stroke="#000" >kg of GHG per year emitted from all of your cows</text>
 </g>
 
       <text font-weight="bold" stroke="#000" transform="matrix(0.9211968779563903,0,0,1.4447336196899414,39.6638276623562,-76.34220209717752) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="title" y="200.20371" x="-507.333435" stroke-opacity="null" stroke-width="0" fill="#000000">Background Information:</text>
 
       <image stroke="null" xlink:href="chicken.png" id="fm-chicken2" height="122.960628" width="122.331353" y="60" x="-590"/>
       <image stroke="null" xlink:href="pig.png" id="fm-pig2" height="122.960628" width="122.331353" y="60" x="-590"/>
-      <image stroke="null" xlink:href="cow.png" id="fm-cow2" height="122.960628" width="122.331353" y="60" x="-590"/>
+      <image stroke="null" xlink:href="cow.png" id="fm-cow2" height="150" width="230" y="50" x="-510"></image>
 
       <image stroke="null" xlink:href="chickenChart.jpg" id="chickenGraph" height="475" width="500" y="60" x="-507"/>
       <image stroke="null" xlink:href="pigsChart.png" id="pigGraph" height="475" width="500" y="60" x="-507"/>
@@ -252,7 +252,7 @@ function callCow(){
   document.getElementById("box").setAttribute('x', '133');
   document.getElementById("title").setAttribute('x', '507.333435');
   document.getElementById("x").setAttribute('x', '1021.999647');
-  document.getElementById("fm-cow2").setAttribute('x', '540');
+  document.getElementById("fm-cow2").setAttribute('x', '510');
   document.getElementById("background").innerHTML='flkdajfkdjs;flksajf;lkdsjfa;lskjflsggggggggggggggggggggggggggggggggggg<br>';
   document.getElementById("boxCowInput").setAttribute('x', '235');
   document.getElementById("w-outerEqual").setAttribute('x', '280');
