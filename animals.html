@@ -169,6 +169,8 @@ function chickenOutput(){
       else {
         var output = chickenInputCalc * 306.122;
         document.getElementById('outputCalc').innerHTML = output;
+        document.getElementById('title').setAttribute('x', '-500');
+        document.getElementById("background").setAttribute('x', '-1000')
         document.getElementById("chickenGraph").setAttribute('x', '510');
     }
 }
@@ -221,6 +223,8 @@ function pigOutput(){
       else {
         var output = pigInputCalc * 714.286;
         document.getElementById('p-outputCalc').innerHTML = output;
+        document.getElementById('title').setAttribute('x', '-500');
+        document.getElementById("background").setAttribute('x', '-1000')
         document.getElementById("pigGraph").setAttribute('x', '510');
     }
 }
@@ -270,6 +274,8 @@ function cowOutput(){
       else {
         var output = cowInputCalc * 3006.993;
         document.getElementById('w-outputCalc').innerHTML = output;
+        document.getElementById('title').setAttribute('x', '-500');
+        document.getElementById("background").setAttribute('x', '-1000')
         document.getElementById("cowGraph").setAttribute('x', '510');
     }
 }
