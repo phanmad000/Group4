@@ -148,7 +148,7 @@ function callChicken(){
   document.getElementById("title").setAttribute('x', '507.333435');
   document.getElementById("x").setAttribute('x', '1021.999647');
   document.getElementById("fm-chicken2").setAttribute('x', '540');
-  document.getElementById("background").innerHTML='The poultry statistics are usually divided up among the meat and eggs <br>poultry. However, the statistics are not usually divided up like they are<br>for the cattle. <br><br>These statistics are divided between the different production systems:<br>backyard, industrial, and broilers. The backyard and industrial <br>systems produce meat and eggs, while the broilers only meat. In total,<br>the broilers have the most amount of GHG emissions and the backyard<br>the least.>';
+  document.getElementById("background").innerHTML='The poultry statistics are usually divided up among the meat and eggs <br>poultry. However, the statistics are not usually divided up like they are<br>for the cattle. <br><br>These statistics are divided between the different production systems:<br>backyard, industrial, and broilers. The backyard and industrial <br>systems produce meat and eggs, while the broilers only meat. In total,<br>the broilers have the most amount of GHG emissions and the backyard<br>the least.';
   document.getElementById("boxChickenInput").setAttribute('x', '235');
   document.getElementById("c-outerEqual").setAttribute('x', '280');
   document.getElementById("c-upperEqual").setAttribute('x', '305');
@@ -171,7 +171,7 @@ function chickenOutput(){
         var output = chickenInputCalc * 306.122;
         document.getElementById('outputCalc').innerHTML = output;
         document.getElementById('title').setAttribute('x', '-500');
-        document.getElementById("background").setAttribute('x', '-1000');
+        document.getElementById("background").innerHTML = ' ';
         document.getElementById("backBox").setAttribute('x', '-1000');
         document.getElementById("chickenGraph").setAttribute('x', '510');
     }
@@ -227,7 +227,7 @@ function pigOutput(){
         var output = pigInputCalc * 714.286;
         document.getElementById('p-outputCalc').innerHTML = output;
         document.getElementById('title').setAttribute('x', '-500');
-        document.getElementById("background").setAttribute('x', '-1000');
+        document.getElementById("background").innerHTML=' ';
         document.getElementById("backBox").setAttribute('x', '-1000');
         document.getElementById("pigGraph").setAttribute('x', '510');
     }
@@ -279,7 +279,7 @@ function cowOutput(){
         var output = cowInputCalc * 3006.993;
         document.getElementById('w-outputCalc').innerHTML = output;
         document.getElementById('title').setAttribute('x', '-500');
-        document.getElementById("background").setAttribute('x', '-1000');
+        document.getElementById("background").innerHTML;
         document.getElementById("backBox").setAttribute('x', '-1000');
         document.getElementById("cowGraph").setAttribute('x', '510');
     }
@@ -312,7 +312,7 @@ function closeBox(){
   document.getElementById("pigGraph").setAttribute('x', '-507');
 
   document.getElementById("fm-cow2").setAttribute('x', '-540');
-  document.getElementById("background").setAttribute('x', '-1000')
+  document.getElementById("background").innerHTML=' ';
   document.getElementById("boxCowInput").setAttribute('x', '-235');
   document.getElementById("w-outerEqual").setAttribute('x', '-280');
   document.getElementById("w-upperEqual").setAttribute('x', '-305');
