@@ -264,11 +264,12 @@ function callCow(){
   document.getElementById("w-lowerEqual").setAttribute('x', '305');
   document.getElementById("w-outputCalc").setAttribute('x', '210');
   document.getElementById("w-boxOutputOuter").setAttribute('x', '210');
+  document.getElementById("w-boxOutput").setAttribute('x', '210');
   document.getElementById("www").setAttribute('y', '375');
 }
 
 function cowOutput(){
-    var cowInputCalc = document.getElementById("pigInputCalc").value;
+    var cowInputCalc = document.getElementById("cowInputCalc").value;
     if (cowInputCalc == ' ') {
       alert('Please input a number.');
     }
